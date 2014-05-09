@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <title>Creative Destruction | Melissa Livingston</title>
+	    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+		<script type="text/javascript" src="js/easing.1.3.js"></script>
+		<script type="text/javascript" src="js/galleryview-3.0.js"></script>
+		<script type="text/javascript" src="js/timers-1.2.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/galleryview.css"/>
+		<script type="text/javascript">
+			$(function(){
+				$('#myGallery').galleryView({
+					panel_width: 950,
+					panel_height: 500,
+					frame_width: 55,
+					enable_overlays: true,
+					autoplay: true
+				});
+			});
+		</script>
+	    <!-- #EndEditable -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link href="css/main.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+		    function displaySubNav(id) {
+		    	var el = document.getElementById('innerNavbg');
+		    	el.style.display = "block";
+		    	var subnavMenus = new Array("aboutNav", "portfolioNav", "resumeNav", "contactNav");
+		    	for (var i in subnavMenus) {
+		    		var el = document.getElementById(subnavMenus[i]);
+		    		el.style.display = "none";
+		    	}
+		    	var navOptions = new Array("aboutNavOption", "portfolioNavOption", "resumeNavOption", "contactNavOption");
+		    	for (var i in navOptions) {
+		    		var el = document.getElementById(navOptions[i]);
+		    		el.style.background = "none";
+		    	}
+		    	var el = document.getElementById(id);
+		    	el.style.display = "block";
+		    	var el = document.getElementById(id + "Option");
+		    	el.style.background = "#3842FF";
+		    };
+		</script>
+	</head>
+	<body>
+		<div class="styleBar"></div>
+		<div id="header">		
+			<div id="navbar">
+				<div id="innerNavbg"></div>
+				<div id="innerNav">
+					<a href="home.html" style="position:absolute; left:50px; z-index:6; margin-top:-27px;">
+					<img style="z-index:200; width:250px;" alt="logo" src="images/logos/ml.png" title="Home" /></a>
+					<div id="banner">
+						<ul>
+                            <li><img src="images/icons/48/facebook-Icon.png" alt="Facebook" title="View my Facebook Page" onclick="window.open('https://www.facebook.com/melissa.livingston.14');" /></li>
+                            <li><img src="images/icons/48/Instagram-Icon.png" alt="Instagram" title="View my Instagram Page" onclick="window.open('http://instagram.com/ascreamingweas');" /></li>
+                            <li><img src="images/icons/48/Pinterest-Icon.png" alt="Pinterest" title="View my Pinterest Page" onclick="window.open('http://www.pinterest.com/mlivingston1/');" /></li>
+                        </ul>
+					</div>
+					<ul id="mainNav">
+						<li>
+						<a href="pages/contact/home.html" id="contactNavOption" onmouseover="displaySubNav('contactNav');" style="background-image:none;background-position:initial initial;">Contact Me</a></li>
+						<li>
+						<a href="pages/resume/home.html" id="resumeNavOption" onmouseover="displaySubNav('resumeNav');" style="background-image:none;background-position:initial initial;">Resum&eacute;</a></li>
+						<li>
+						<a href="pages/portfolio/home.html" id="portfolioNavOption" onmouseover="displaySubNav('portfolioNav');" style="background-image:none;background-position:initial initial;">Portfolio</a></li>
+						<li>
+						<a href="pages/about/home.html" id="aboutNavOption" onmouseover="displaySubNav('aboutNav');" style="background:#3842FF;background-position:initial initial;">About Me</a></li>
+					</ul>
+					<ul id="aboutNav" class="subNav" style="display:block;">
+						<li><a href="pages/about/background/home.html">My Background</a></li>
+						<li><a href="pages/about/inspiration/home.html">Inspiration</a></li>
+						<li class="end"><a href="pages/about/me/home.html">Me, Today</a></li>
+					</ul>
+					<ul id="portfolioNav" class="subNav">
+						<li><a href="pages/portfolio/school/home.html">School Projects</a></li>
+						<li class="end"><a href="pages/portfolio/free/home.html">Free Time</a></li>
+					</ul>
+					<ul id="resumeNav" class="subNav">
+						<li class="end"><a href="pages/resume/awards/home.html">Scholarships and Awards</a></li>
+					</ul>
+					<ul id="contactNav" class="subNav">
+						<li class="end"><a href="pages/contact/blog/home.html">Blog?</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="main" style="width:980px;">
+			<!-- <div id="breadcrumbs"></div>
+			#BeginEditable "content" -->
+			<div id="firstsection">
+				<!-- SLIDING PICURE FRAME -->
+	  			<ul id="myGallery">
+		            <li><img alt="image0" data-frame="images/slideshow/1911875_625817107466754_442648456_n.png" src="images/slideshow/1911875_625817107466754_442648456_n.png"
+		            title="Lady at the Window" data-description="This is a description of this image."/></li>
+		            <li><img alt="image1" data-frame="images/slideshow/1794765_631256576922807_1238483905_n.png" src="images/slideshow/1794765_631256576922807_1238483905_n.png" 
+		            title="Lake McDonald" data-description="This is a description of this image."/></li>
+		            <li><img alt="image2" data-frame="images/slideshow/1781940_614696341912164_87849346_n.png" src="images/slideshow/1781940_614696341912164_87849346_n.png" 
+		            title="Going to the Sun..." data-description="This is a description of this image."/></li>
+					<li><img alt="image3" data-frame="images/slideshow/1780708_614698651911933_626271587_n.png" src="images/slideshow/1780708_614698651911933_626271587_n.png" 
+		            title="Polebridge Mercantile #1" data-description="This is a description of this image."/></li>
+		            <li><img alt="image4" data-frame="images/slideshow/1780699_614698558578609_55025866_n.png" src="images/slideshow/1780699_614698558578609_55025866_n.png" 
+		            title="Polebridge Mercantile #2" data-description="This is a description of this image."/></li>
+		            <li><img alt="image5" data-frame="images/slideshow/1621713_614698011911997_980497011_n.png" src="images/slideshow/1621713_614698011911997_980497011_n.png" 
+		            title="Polebridge Mercantile #3" data-description="This is a description of this image."/></li>
+		            <li><img alt="image6" data-frame="images/slideshow/10255692_685526994844825_1163869447_n.png" src="images/slideshow/10255692_685526994844825_1163869447_n.png" 
+		            title="Faces" data-description="This is a description of this image."/></li>
+					<li><img alt="image7" data-frame="images/slideshow/1779795_614699818578483_1595901999_n.png" src="images/slideshow/1779795_614699818578483_1595901999_n.png" 
+		            title="Cubism" data-description="This is a description of this image."/></li>
+		            <li><img alt="image8" data-frame="images/slideshow/1779044_620283941353404_1487679461_n.png" src="images/slideshow/1779044_620283941353404_1487679461_n.png" 
+		            title="AHHHHH!" data-description="This is a description of this image."/></li>
+		            <li><img alt="image9" data-frame="images/slideshow/1625688_614697895245342_198121261_n.png" src="images/slideshow/1625688_614697895245342_198121261_n.png" 
+		            title="Instrumental Mural" data-description="This is a description of this image."/></li>
+		            <li><img alt="image10" data-frame="images/slideshow/1601516_614698385245293_221946961_n.png" src="images/slideshow/1601516_614698385245293_221946961_n.png" 
+		            title="What? What.. What!" data-description="This is a description of this image."/></li>
+		            <li><img alt="image11" data-frame="images/slideshow/1601495_614699611911837_624469988_n.png" src="images/slideshow/1601495_614699611911837_624469988_n.png" 
+		            title="The Perl with the Girl Earing" data-description="This is a description of this image."/></li>
+                    <li><img alt="image12" data-frame="images/slideshow/1546454_614698605245271_1542719867_n.png" src="images/slideshow/1546454_614698605245271_1542719867_n.png" 
+		            title="Burka Burka" data-description="This is a description of this image."/></li>
+                    <li><img alt="image13" data-frame="images/slideshow/1546368_614697915245340_609131549_n.png" src="images/slideshow/1546368_614697915245340_609131549_n.png" 
+		            title="They call him..." data-description="This is a description of this image."/></li>
+                    <li><img alt="image14" data-frame="images/slideshow/1546104_614698251911973_1091528786_n.png" src="images/slideshow/1546104_614698251911973_1091528786_n.png" 
+		            title="Hey Pablo, jump on it" data-description="This is a description of this image."/></li>
+                    <li><img alt="image15" data-frame="images/slideshow/1536527_614705281911270_820428052_n.png" src="images/slideshow/1536527_614705281911270_820428052_n.png" 
+		            title="Tree" data-description="This is a description of this image."/></li>
+                    <li><img alt="image16" data-frame="images/slideshow/1507851_614698728578592_395097090_n.png" src="images/slideshow/1507851_614698728578592_395097090_n.png" 
+		            title="Baby Derp" data-description="This is a description of this image."/></li>
+                    <li><img alt="image17" data-frame="images/slideshow/1505631_614698055245326_208121207_n.png" src="images/slideshow/1505631_614698055245326_208121207_n.png" 
+		            title="Vut a volvily teeput" data-description="This is a description of this image."/></li>
+                    <li><img alt="image18" data-frame="images/slideshow/1014063_614698261911972_449853746_n.png" src="images/slideshow/1014063_614698261911972_449853746_n.png" 
+		            title="Josesph and the Technicolor Horse" data-description="This is a description of this image."/></li>
+                    <li><img alt="image19" data-frame="images/slideshow/58455_614700081911790_1393856502_n.png" src="images/slideshow/58455_614700081911790_1393856502_n.png" 
+		            title="Dude... Idk" data-description="This is a description of this image."/></li>
+		        </ul>
+			</div>
+		</div>
+		<div id="footer">
+			<div style="width:960px;position:relative;margin:0 auto;padding:20px;">
+				<div id="footleft">
+					<p>
+		                <br/>This site is owned and maintained by Melissa Livingston.<br/>
+                        If you have difficulty viewing anything or notice any problems with the site, please contact <a href="mailto:ascreamingweas@gmail.com">ascreamingweas@gmail.com</a>.<br/><br/>
+                        &copy; Melissa Livingston.<br/>All Rights Reserved.
+		         	</p>
+				</div>
+			</div>
+		</div>
+		<div class="styleBar"></div>
+	</body>
+</html>
